@@ -1,0 +1,494 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta name="description" content="Professional portfolio website template - Modern minimalist design"> 
+<meta name="keywords" content="portfolio, professional, developer, minimalist"> 
+<meta name="Rizki Okta Triadi" content="Rizki Okta Triadi"> 
+<title>Rizki Okta Triadi - Professional Portfolio</title> 
+<link rel="stylesheet" href="style.css"> 
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+
+<style>
+/* --- TAMBAHAN ANIMASI ISTIMEWA (TANPA MENGUBAH KONTEN) --- */
+html { scroll-behavior: smooth; }
+
+/* 1. Efek Muncul Berurutan (Reveal) */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 2. Efek Floating Gambar Profil */
+.profile-image {
+    animation: floatAnim 5s ease-in-out infinite;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+}
+@keyframes floatAnim {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* 3. Efek Hover Kartu Istimewa */
+.skill-card:hover, .portfolio-item:hover, .personal-interests div[style*="background: white"]:hover {
+    transform: translateY(-12px) scale(1.02) !important;
+    box-shadow: 0 20px 40px rgba(0, 86, 179, 0.2) !important;
+    transition: all 0.4s ease !important;
+}
+
+/* 4. Fix Loading Screen */
+#loading-screen {
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+.loaded #loading-screen {
+    opacity: 0;
+    visibility: hidden;
+}
+</style>
+</head> 
+<body> 
+<div id="loading-screen"> 
+<div class="loading-spinner"></div> 
+</div> 
+
+<nav class="navbar" id="navbar"> 
+<div class="nav-container"> 
+<a href="#home" class="nav-logo">Rizki Okta Triadi</a> 
+<ul class="nav-menu" id="nav-menu"> 
+<li class="nav-item"> 
+<a href="#home" class="nav-link">Home</a> 
+</li> 
+<li class="nav-item"> 
+<a href="#about" class="nav-link">About</a> 
+</li> 
+<li class="nav-item"> 
+<a href="#skills" class="nav-link">Skills</a> 
+</li> 
+<li class="nav-item"> 
+<a href="#portfolio" class="nav-link">Portfolio</a> 
+</li> 
+<li class="nav-item"> 
+<a href="#personal-interests" class="nav-link">Personal Interests</a> 
+</li> 
+<li class="nav-item"> 
+<a href="#contact" class="nav-link">Contact</a> 
+</li> 
+</ul> 
+<div class="hamburger" id="hamburger"> 
+<span class="bar"></span> 
+<span class="bar"></span> 
+<span class="bar"></span> 
+</div> 
+</div> 
+</nav> 
+
+<section id="home" class="hero"> 
+<div class="hero-container"> 
+<div class="hero-content fade-in"> 
+<h1 class="hero-title">Rizki Okta Triadi</h1> 
+<p class="hero-subtitle">Personal Portfolio Website</p> 
+<p class="hero-description">An IT and Management professional focused on integrating technology, optimizing processes, and delivering efficient, business-oriented solutions.</p> 
+<a href="#portfolio" class="cta-button">Welcome</a> 
+</div> 
+</div> 
+<div class="hero-scroll-indicator"> 
+<div class="scroll-arrow"></div> 
+</div> 
+</section> 
+
+<section id="about" class="about section"> 
+<div class="container"> 
+<div class="about-content"> 
+<div class="about-text fade-in"> 
+<h2 class="section-title">About Me</h2> 
+<p class="about-description"> 
+I am an Information Technology graduate with 3+ years of professional experience in the logistics and expedition industry. 
+I specialize in managing IT infrastructure, network stability, and developing data security system using the AES-128 algorithm. 
+</p> 
+<p class="about-description"> 
+With a background as an Operations Leader, I'm passionate about bridging the gap between technical solutions and business efficiency. 
+To further my strategic leadership goals, I'm set to pursue a Master of Management in 2026. I'm dedicated to delivering IT solutions that drive operational excellence and organizational growth. 
+</p> 
+<div class="about-stats"> 
+<div class="stat"> 
+<span class="stat-number">Option 1 (Balanced)</span> 
+<span class="stat-label">IT Support | Networking | Cyber Security</span> 
+</div> 
+<div class="stat"> 
+<span class="stat-number">Option 2 (Action-oriented)</span> 
+<span class="stat-label">Bridging Technology and Operational Excellence</span> 
+</div> 
+<div class="stat"> 
+<span class="stat-number">Option 3 (Strategic)</span> 
+<span class="stat-label">Tech-Driven Professional Transitioning into Strategic Management</span> 
+</div> 
+</div> 
+</div> 
+<div class="about-image fade-in"> 
+<img src="okta1.png" alt="Profile Picture" class="profile-image"> 
+</div> 
+</div> 
+</div> 
+</section> 
+
+<section id="skills" class="skills section"> 
+<div class="container"> 
+<h2 class="section-title fade-in">Skills & Expertise</h2> 
+<div class="skills-grid"> 
+<div class="skill-card fade-in"> 
+<div class="skill-icon">♼</div> 
+<h3 class="skill-title">IT Infrastructure</h3> 
+<p class="skill-description">Network Design (LAN/WAN), Server Administration, Hardware Troubleshooting, System Maintenance</p> 
+</div> 
+<div class="skill-card fade-in"> 
+<div class="skill-icon">💻</div> 
+<h3 class="skill-title">Software & Development</h3> 
+<p class="skill-description">Full-stack Dev (PHP/Laravel/HTML), Database Management (MySQL/SQL), Microsoft Office,UI/UX Design, Cisco, VSCode</p> 
+</div> 
+<div class="skill-card fade-in"> 
+<div class="skill-icon">🔐</div> 
+<h3 class="skill-title">Cyber Security</h3> 
+<p class="skill-description">AES Cryptography, Data Encryption & Privacy, Security Risk Assessment, Information Assurance</p> 
+</div> 
+<div class="skill-card fade-in"> 
+<div class="skill-icon">🚀</div> 
+<h3 class="skill-title">Management & Strategy</h3> 
+<p class="skill-description">Project Lifecycle Mgmt, IT Asset Management, Vendor Coordination, Resource Allocation</p> 
+</div> 
+<div class="skill-card fade-in"> 
+<div class="skill-icon">👨🏻‍💼</div> 
+<h3 class="skill-title">Operational Leadership</h3> 
+<p class="skill-description">Logistics Tech Support, Operational Coordination, Team Supervision, Workflow Optimization</p> 
+</div> 
+<div class="skill-card fade-in"> 
+<div class="skill-icon">💡</div> 
+<h3 class="skill-title">Professional Skills</h3> 
+<p class="skill-description">Strategic Thinking, Public Speaking, Analytical Problem Solving, Cross-team Collaboration</p> 
+</div> 
+</div> 
+</div> 
+</section> 
+
+<section id="portfolio" class="portfolio section"> 
+<div class="container"> 
+<h2 class="section-title fade-in">Portfolio</h2> 
+<div class="portfolio-filters fade-in"> 
+<button class="filter-btn active" data-filter="all">All</button> 
+<button class="filter-btn" data-filter="education">Education</button> 
+<button class="filter-btn" data-filter="work experience">Work Experience</button> 
+<button class="filter-btn" data-filter="certification">Certification</button> 
+</div> 
+
+<div class="portfolio-grid"> 
+<div class="portfolio-item fade-in" data-category="education"> 
+<div class="portfolio-image"> 
+<img src="trisakti.jpeg" alt="Master of Management (Candidate)"> 
+<div class="portfolio-overlay"> 
+</div> 
+</div> 
+<div class="portfolio-content"> 
+<h3 class="portfolio-title">Master of Management (Candidate)</h3> 
+<p class="portfolio-description">Universitas Trisakti | Expected Start: 2026 | "Focused on integrating advanced management principles with technological innovation. This program is a strategic step to enhance my leadership capabilities and operational strategy, preparing me for senior management roles in the tech and logistics industry".</p> 
+<div class="portfolio-tags"> 
+<span class="tag">Strategic Management</span> 
+<span class="tag">Management Information System (MIS)</span> 
+<span class="tag">Human Resource Management</span> 
+</div> 
+</div> 
+</div> 
+
+<div class="portfolio-item fade-in" data-category="education"> 
+<div class="portfolio-image"> 
+<img src="Sidang.jpeg" alt="Bachelor of Computer Science"> 
+<div class="portfolio-overlay"> 
+</div> 
+</div> 
+<div class="portfolio-content"> 
+<h3 class="portfolio-title">Bachelor of Computer Science</h3> 
+<p class="portfolio-description">Universitas Pamulang | Graduated: July 2025 | GPA: 3.18/4.00 "Specialized in software development and network infrastructure. My capstone project involved implementing the AES-128 Cryptography algorithm for secure file management. This degree provided a solid technical foundation in programming, cybersecurity, and systems analysis".</p> 
+<div class="portfolio-tags"> 
+<span class="tag">Software Engineering</span> 
+<span class="tag">Cyber Security & Information Assurance</span> 
+<span class="tag">Network & System Administration</span> 
+</div> 
+</div> 
+</div> 
+
+<div class="portfolio-item fade-in" data-category="work experience"> 
+<div class="portfolio-image"> 
+<img src="IT.jpeg" alt="IT Support"> 
+<div class="portfolio-overlay"> 
+</div> 
+</div> 
+<div class="portfolio-content"> 
+<h3 class="portfolio-title">IT Support</h3> 
+<p class="portfolio-description">PT Tiki Jalur Nugraha Ekakurir (Januari 2023 - Now)</p> 
+<p class="portfolio-description">• Managed IT infrastrukture and network stability for multiple agencies to ensure 24/7 operational uptime.</p> 
+<p class="portfolio-description">• Resolved complex technical issues and maintained hardware/software assets across the region.</p> 
+<p class="portfolio-description">• Optimized system security and data integrity protocols for logistics workflows</p> 
+<div class="portfolio-tags"> 
+<span class="tag">Infrastructure Management</span> 
+<span class="tag">System Security</span> 
+<span class="tag">Asset Governance</span> 
+</div> 
+</div> 
+</div> 
+
+<div class="portfolio-item fade-in" data-category="work experience"> 
+<div class="portfolio-image"> 
+<img src="net.jpeg" alt="Network Engineer"> 
+<div class="portfolio-overlay"> 
+</div> 
+</div> 
+<div class="portfolio-content"> 
+<h3 class="portfolio-title">Network Engineer</h3> 
+<p class="portfolio-description">PT Tiki Jalur Nugraha Ekakurir (Feb 2021 - Dec 2022)</p> 
+<p class="portfolio-description">• Ensured 24/7 network uptime through proactive monitoring, troubleshooting, and infrastructure audits across distributed logistics centers.</p> 
+<p class="portfolio-description">• Spearheaded the deployment and maintenance of network system across multiple JNE hubs and branch offices in the Tangerang region.</p> 
+<p class="portfolio-description">• Designed and standardized network configurations for region hubs to ensure high-speed data synchronization between local nodes and the central system.</p> 
+<div class="portfolio-tags"> 
+<span class="tag">Multi-Site Infrastructure Management</span> 
+<span class="tag">Network Reliability & Mobility</span> 
+<span class="tag">Connectivity Optimization</span> 
+</div> 
+</div> 
+</div> 
+
+<div class="portfolio-item fade-in" data-category="work experience"> 
+<div class="portfolio-image"> 
+<img src="lead.jpeg" alt="Operational Leadership"> 
+<div class="portfolio-overlay"> 
+</div> 
+</div> 
+<div class="portfolio-content"> 
+<h3 class="portfolio-title">Operational Leadership</h3> 
+<p class="portfolio-description">PT Tiki Jalur Nugraha Ekakurir (Mar 2018 - Jan 2021)</p> 
+<p class="portfolio-description">• Responsible for optimizing the end-to-end logistics flow, specifically accelerating the timeline from sorting processes to vehicle loading to meet strict delivery schedules.</p> 
+<p class="portfolio-description">• Successfully managed and monitored team performance to hit high success targets were achieved with speed and accuracy.</p> 
+<p class="portfolio-description">• Supervised ground operations and resource allocation to eliminate bottlenecks in the sorting area, significantly improving the turnaround time for outbound logistics.</p> 
+<div class="portfolio-tags"> 
+<span class="tag">Process Efficiency & Throughput</span> 
+<span class="tag">Performance Target Achievement</span> 
+<span class="tag">Workflow Coordination</span> 
+</div> 
+</div> 
+</div> 
+
+<div class="portfolio-item fade-in" data-category="certification"> 
+<div class="portfolio-image"> 
+<img src="network.png" alt="Network Administrator - Skill Passport"> 
+<div class="portfolio-overlay"> 
+</div> 
+</div> 
+<div class="portfolio-content"> 
+<h3 class="portfolio-title">Network Administrator - Skill Passport</h3> 
+<p class="portfolio-description">Issued by BNSP & Universitas Pamulang.</p> 
+<p class="portfolio-description">A professional competency certification recognizing expertise in managing, configuring, and troubleshooting network infrastructures. This certification validates my proficiency in network administration according to national industry standards.</p> 
+<div class="portfolio-tags"> 
+</div> 
+</div> 
+</div> 
+
+<div class="portfolio-item fade-in" data-category="certification"> 
+<div class="portfolio-image"> 
+<img src="pemrogram.png" alt="Programmer Training"> 
+<div class="portfolio-overlay"> 
+</div> 
+</div> 
+<div class="portfolio-content"> 
+<h3 class="portfolio-title">Programmer Training</h3> 
+<p class="portfolio-description">Issued by Universitas Pamulang.</p> 
+<p class="portfolio-description">Successfully completed intensive training focused on software development logic, coding best practices, and application architecture.</p> 
+<div class="portfolio-tags"> 
+</div> 
+</div> 
+</div> 
+<div class="portfolio-item fade-in" data-category="certification"> 
+<div class="portfolio-image"> 
+<img src="tupel1.png" alt="TOEFL (Test of English as a Foreign Language)"> 
+<div class="portfolio-overlay"> 
+</div> 
+</div> 
+<div class="portfolio-content"> 
+<h3 class="portfolio-title">TOEFL (Test of English as a Foreign Language)</h3> 
+<p class="portfolio-description">Issued by LB Universitas Pamulang.</p> 
+<p class="portfolio-description">Demonstrated English language proficiency, ensuring readiness for global work environments and advanced management studies.</p> 
+<div class="portfolio-tags"> 
+</div> 
+</div> 
+</div> 
+
+<div class="portfolio-item fade-in" data-category="certification"> 
+<div class="portfolio-image"> 
+<img src="pkm.png" alt="Pengabdian Kepada Masyarakat (PKM)"> 
+<div class="portfolio-overlay"> 
+</div> 
+</div> 
+<div class="portfolio-content"> 
+<h3 class="portfolio-title">Pengabdian Kepada Masyarakat (PKM)</h3> 
+<p class="portfolio-description">Project Title: Dampak Negatif Dari Penggunaan Media Sosial Kepada Anak-anak Panti Di Yayasan Baitul Yatim H. Caong.</p> 
+<p class="portfolio-description">Conducted a social research and education session focused on digital literacy. I analyzed the risks of social media for orphaned children and provided actionable insights to mitigate negative digital influences, fostering a safer online environment for the younger generation.</p> 
+<div class="portfolio-tags"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+
+<section id="personal-interests" class="personal-interests section"> 
+<div class="container"> 
+<h2 class="section-title fade-in">Get to Know Me</h2> 
+<div class="personal interests-info fade-in"> 
+<h2 class="section-title">Beyond the Professional Life</h2> 
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; padding: 0 20px;"> 
+<div class="fade-in" style="background: white; width: 280px; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"> 
+<div style="width: 100px !important; height: 100px !important; margin: 0 auto 15px; border-radius: 50%; overflow: hidden; border: 3px solid #0056b3; display: block;"> 
+<img src="wew.jpeg" alt="Traveling" 
+style="width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important;"> 
+</div> 
+
+<h3 style="color: #0056b3; margin-bottom: 10px;">Traveling</h3> 
+<p style="color: #666; font-size: 14px;">An avid explorer who values cultural diversity and environmental adaptability. Traveling has sharpened my ability to navigate unfamiliar situations, manage logistical challenges, and maintain a global perspective—essential traits for modern management.</p> 
+</div> 
+
+<div class="fade-in" style="background: white; width: 280px; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"> 
+<div style="font-size: 45px; margin-bottom: 15px;">📚</div> 
+<h3 style="color: #0056b3; margin-bottom: 10px;">Continuous Learning</h3> 
+<p style="color: #666; font-size: 14px;">Dedicated to lifelong learning with a focus on digital transformation and strategic leadership. I am actively deepening my knowledge in management trends and emerging technologies to bridge the gap between technical execution and business strategy.</p> 
+</div> 
+
+<div class="fade-in" style="background: white; width: 260px; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"> 
+<div style="font-size: 40px; margin-bottom: 15px;">🏊‍♂️</div> 
+<h3 style="color: #0056b3; margin-bottom: 10px;">Swimming</h3> 
+<p style="color: #666; font-size: 13px; line-height: 1.6;">Engaging in swimming to maintain physical discipline and mental clarity, which are essential for staying productive in high-pressure environments.</p> 
+</div> 
+
+<div class="fade-in" style="background: white; width: 260px; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"> 
+<div style="font-size: 40px; margin-bottom: 15px;">🎨</div> 
+<h3 style="color: #0056b3; margin-bottom: 10px;">Art & Painting</h3> 
+<p style="color: #666; font-size: 13px; line-height: 1.6;">Practicing painting to sharpen my attention to detail and creative problem-solving skills, allowing for fresh perspectives in technical tasks.</p> 
+</div> 
+
+<div class="fade-in" style="background: white; width: 260px; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"> 
+<div style="font-size: 40px; margin-bottom: 15px;">🏛️</div> 
+<h3 style="color: #0056b3; margin-bottom: 10px;">Museums</h3> 
+<p style="color: #666; font-size: 13px; line-height: 1.6;">Exploring museums to understand history and cultural evolution, which helps in building a broader global mindset and analytical thinking.</p> 
+</div> 
+
+<div class="fade-in" style="background: white; width: 260px; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"> 
+<div style="font-size: 40px; margin-bottom: 15px;">🎮</div> 
+<h3 style="color: #0056b3; margin-bottom: 10px;">Gaming</h3> 
+<p style="color: #666; font-size: 13px; line-height: 1.6;">Honing strategic thinking, quick decision-making, and teamwork through competitive gaming, mirroring the dynamics of modern operations.</p> 
+</div> 
+
+<div class="fade-in" style="background: white; width: 260px; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"> 
+<div style="font-size: 40px; margin-bottom: 15px;">🍳</div> 
+<h3 style="color: #0056b3; margin-bottom: 10px;">Cooking</h3> 
+<p style="color: #666; font-size: 13px; line-height: 1.6;">Mastering the art of cooking, which requires precise timing, resource management, and execution—very similar to operational management.</p> 
+</div> 
+
+<div class="fade-in" style="background: white; width: 260px; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"> 
+<div style="font-size: 40px; margin-bottom: 15px;">🎬</div> 
+<h3 style="color: #0056b3; margin-bottom: 10px;">Cinema & Analysis</h3> 
+<p style="color: #666; font-size: 13px; line-height: 1.6;">Enthusiastic about Action, Thriller, and Drama films. I enjoy analyzing complex plots and psychological narratives, which sharpens my critical thinking and empathy in professional environments.</p> 
+</div> 
+</div>
+</div> 
+</div>
+</section> 
+
+
+<section id="contact" class="contact section"> 
+<div class="container"> 
+<div class="contact-content"> 
+<div class="contact-info fade-in"> 
+<h2 class="section-title">Let's Connect and Collaborate</h2> 
+<p class="contact-description">I am always open to discussing new opportunities, digital transformation projects, or management insights. Whether you have a question or just want to say hi, my inbox is always open.</p> 
+<div class="contact-details"> 
+<div class="contact-item"> 
+<span class="contact-label">EMAIL</span> 
+<a href="mailto:deokta390@gmail.com" class="contact-link">deokta390@gmail.com</a> 
+</div> 
+<div class="contact-item"> 
+<span class="contact-label">Phone</span> 
+<a href="tel:+6281383510828" class="contact-link">+62 8138-3510-828</a> 
+</div> 
+<div class="contact-item"> 
+<span class="contact-label">Location</span> 
+<span class="contact-text">Tangerang, Banten</span> 
+</div> 
+</div> 
+<div class="social-links"> 
+<a href="https://www.linkedin.com/in/rizki-okta-triadi-98ab34394" class="social-link" aria-label="LinkedIn">LinkedIn</a> 
+<a href="https://www.instagram.com/deoktaoz?igsh=ampsZWhuY3hoaDVt&utm_source=qr" class="social-link" aria-label="Instagram">Instagram</a> 
+<a href="#" class="social-link" aria-label="GitHub">GitHub</a> 
+</div> 
+</div> 
+<form class="contact-form fade-in" id="contact-form"> 
+<div class="form-group"> 
+<label for="name" class="form-label">Name</label> 
+<input type="text" id="name" name="name" class="form-input" required> 
+</div> 
+<div class="form-group"> 
+<label for="email" class="form-label">Email</label> 
+<input type="email" id="email" name="email" class="form-input" required> 
+</div> 
+<div class="form-group"> 
+<label for="subject" class="form-label">Subject</label> 
+<input type="text" id="subject" name="subject" class="form-input" required> 
+</div> 
+<div class="form-group"> 
+<label for="message" class="form-label">Message</label> 
+<textarea id="message" name="message" class="form-textarea" rows="5" required></textarea> 
+</div> 
+<button type="submit" class="submit-button">Send Message</button> 
+</form> 
+</div> 
+</div> 
+</section> 
+
+<footer class="footer"> 
+<div class="container"> 
+<div class="footer-content"> 
+<div class="footer-left"> 
+<p class="footer-text">&copy; Portfolio Rizki Okta Triadi.</p> 
+</div> 
+<div class="footer-right"> 
+<nav class="footer-nav"> 
+<a href="#home" class="footer-link">Home</a> 
+<a href="#about" class="footer-link">About</a> 
+<a href="#portfolio" class="footer-link">Portfolio</a> 
+<a href="#contact" class="footer-link">Contact</a> 
+</nav> 
+</div> 
+</div> 
+</div> 
+</footer> 
+
+<script src="script.js"></script> 
+<script>
+// --- JAVASCRIPT ANIMASI ISTIMEWA ---
+window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+});
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+</script>
+</body> 
+</html>
